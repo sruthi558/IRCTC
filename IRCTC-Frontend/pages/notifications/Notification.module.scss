@@ -1,0 +1,111 @@
+/*
+##################################################
+#                                                #
+#                   DASHBOARD                    # 
+#                                                #
+##################################################
+*/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Montserrat'), url(/fonts/Montserrat.ttf) format('ttf');
+}
+
+.modal {
+    .header {
+        background-color: green;
+    }
+}
+  
+.dashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    // background-color: #000076;
+    background-color: #FFFFFF;
+
+    .sidebar {
+        min-width: 18rem;
+        height: 100%;
+    }
+
+    .page {
+        width: 100%;
+
+        .cardsRow {
+
+            margin: 1.5rem 0.7rem 0;
+
+            .cardOne,
+            .cardTwo,
+            .cardThree {
+                position: relative;
+                border-radius: 0.5rem;
+                -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+                box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+                border: none;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                // background-color: #FFFFFF;
+                background-color: #000076;
+                padding: 1.5rem;
+                max-width: 30rem;
+                min-width: 5rem;
+                height: 8rem;
+                overflow: hidden;
+                z-index: 2;
+                color: #FFFFFF;
+
+                h6 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 2.5rem;
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                .subnet,
+                .ticket,
+                .network {
+                    // filter: invert(100%) sepia(9%) saturate(3892%) hue-rotate(102deg) brightness(112%) contrast(92%);
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(18deg) brightness(101%) contrast(102%);
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 2rem;
+                    transform: rotate(20deg);
+                    width: 7rem;
+                    height: auto;
+                    opacity: 0.2;
+                    z-index: 1;
+                }
+
+                .network {
+                    transform: none;
+                }
+            }
+        }
+
+        .chartsContainer {
+            padding: 1rem 2rem;
+            width: 100%;
+            height: auto;
+            display: grid;
+            column-gap: 3rem;
+            row-gap: 2rem;
+            grid-auto-flow: row;
+            grid-template-columns: repeat(3, 1fr);
+
+            .chart {
+                border: 0.1rem solid #000076;
+                color: #000000;
+                padding: 0.5rem;
+            }
+        }
+    }
+}

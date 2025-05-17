@@ -1,0 +1,318 @@
+/*
+##################################################
+#                                                #
+#                   DASHBOARD                    # 
+#                                                #
+##################################################
+*/
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat'), url(/fonts/Montserrat.ttf) format('ttf');
+}
+
+.modal {
+  // .header {
+  //   background-color: green;
+  // }
+  // width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+
+  .page {
+    width: 100%;
+    overflow: scroll;
+ 
+    .cardsRow {
+      margin: 1.5rem 0.7rem 0;
+      .cardOne,
+      .cardTwo,
+      .cardThree {
+        position: relative;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        border: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #000076;
+        padding: 1.5rem;
+        max-width: 30rem;
+        min-width: 5rem;
+        height: 8rem;
+        overflow: hidden;
+        z-index: 2;
+        color: #ffffff;
+
+        h6 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 2.5rem;
+          position: absolute;
+          bottom: 0;
+        }
+
+        .subnet,
+        .ticket,
+        .network {
+          // filter: invert(100%) sepia(9%) saturate(3892%) hue-rotate(102deg) brightness(112%) contrast(92%);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(18deg)
+            brightness(101%) contrast(102%);
+          position: absolute;
+          top: 0.5rem;
+          right: 2rem;
+          transform: rotate(20deg);
+          width: 7rem;
+          height: auto;
+          opacity: 0.2;
+          z-index: 1;
+        }
+
+        .network {
+          transform: none;
+        }
+      }
+    }
+
+    .chartsContainer {
+      padding: 1rem 2rem;
+      width: 100%;
+      height: auto;
+      display: grid;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, 1fr);
+
+      .chart {
+        border: 0.1rem solid #000076;
+        color: #000000;
+        padding: 0.5rem;
+      }
+    }
+
+    .tableContainer {
+      padding: 1rem;
+      overflow-y:scroll !important; 
+      height: 70%;
+        width: 100%;
+   }
+
+  }
+}
+
+.user-pages-heading {
+  grid-column: 1 / -1;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.checklabel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-weight: bold;
+  align-items: center;
+  font-size: 16px;
+}
+
+.inputBoxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin-top: 10px;
+}
+.selectpickers{
+  width: 95%;
+  margin-bottom: 0.6rem;
+}
+.editInputBoxes{
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.521) !important;
+  min-width: 100%;
+}
+.editInputRole{
+  color: red !important;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.393) !important;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.admin_data_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.data_table {
+  width: 100%;
+  border-collapse: collapse;
+  letter-spacing: 0.5px;
+
+  // text-transform: uppercase;
+}
+
+.tableContainer {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin_main_container {
+  // margin: 20px 10px;
+  margin: 15px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // padding: 20px;
+  transition: transform 0.3s ease;
+ 
+}
+
+.data_table th, .data_table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.actionColumn{
+  width: 20%;
+}
+
+.data_table thead th {
+  background-color: #f0f0f0;
+  font-weight: bolder;
+
+  letter-spacing: 1.5px !important;
+  // text-transform: uppercase;
+}
+
+.data_table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data_table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.viewBody{
+  margin-left: 0.3rem;
+}
+
+.invalid {
+  border: 1px solid rgba(255, 0, 0, 0.392); 
+}
+
+.requiredstar::before {
+  content: '*';
+  color: red;
+  margin-right: 1.6rem; 
+  float: inline-end !important;
+}
+
+// Define styles for the tables
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    width: 6rem !important;
+    font-size: 1rem !important;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  
+  tr {
+    transition: background-color 0.3s ease;
+
+    &:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    &:hover {
+      background-color: #e0e0e07d;
+    }
+  }
+}
+
+.tdstyle{
+  font-weight: bold;
+  width: 5rem !important;
+  font-size: 1rem !important;
+}
+.acbtn{
+  background: rgba(0, 0, 255, 0.333);
+}
+.tdAccessCol{
+  font-size: 1rem !important;
+}
+.navstyle{
+  margin-top: 1rem;
+}
+.textStyle{
+  font-weight: bold;
+  font-size: 1rem;
+}
+.clear{
+  cursor: pointer;
+  background: rgba(128, 128, 128, 0.266);
+  float: inline-end !important;
+  font-size: 1.4rem;
+  font-weight: bold !important;
+  border-radius: 50%;
+  padding:5px;
+  margin-bottom: -10px;
+  }
+
+  .button{
+    margin-left: 0.6rem;
+    background: rgba(255, 0, 0, 0.604);
+    color: white;
+    font-weight: bold;
+  }
+  .editbutton{
+    margin-left: 0.6rem;
+  }
+
+  .inputAddons{
+    // background: none;
+    width: 6rem;
+  }

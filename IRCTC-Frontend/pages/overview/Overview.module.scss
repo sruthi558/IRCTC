@@ -1,0 +1,349 @@
+/*
+##################################################
+#                                                #
+#                   DASHBOARD                    # 
+#                                                #
+##################################################
+*/
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat'), url(/fonts/Montserrat.ttf) format('ttf');
+}
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f6f6f6;
+
+  .page {
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .content {
+      padding: 0.5rem;
+      background-color: #f6f6f6;
+      width: 100%;
+
+      .cardsRow {
+        display: grid;
+        // gap: 1rem;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media only screen and (max-width: 1600px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 1200px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .card {
+          padding: 1rem;
+          display: flex;
+          background-color: #ffffff;
+          height: 11rem;
+          // width: 90%;
+          margin: 10px;
+
+          .imageWrapper {
+            margin-right: 10px;
+            display: flex !important;
+
+            .vulnerability,
+            .pnrAnalyzed,
+            .pnrFlagged,
+            .subnet,
+            .takedownConducted,
+            .userFlagged,
+            .users {
+              // filter: sepia(9%) saturate(3892%) hue-rotate(102deg) brightness(112%) contrast(92%);
+              width: 4rem;
+              height: auto;
+              opacity: 0.5;
+              margin-right: 20px;
+              margin-left: 20px;
+            }
+
+            .isp,
+            .ipAddress,
+            .software,
+            .subnet,
+            .takedownConducted,
+            .vulnerability {
+              width: 4rem;
+              height: auto;
+              margin-left: 20px;
+              opacity: 0.5;
+            }
+          }
+
+          .cardBody {
+            width: 60%;
+            margin: auto;
+            background-color: inherit;
+
+            h2,
+            h4,
+            h5,
+            p {
+              text-decoration: none;
+              font-size: 15px;
+            }
+          }
+
+          .verticalRule {
+            border-right: 1px solid #000076;
+            margin: 2rem 1.5rem;
+          }
+        }
+
+        .card:hover,
+        .card:focus {
+          box-shadow: 0 0.5rem 0.5rem -1rem var(--hover);
+          transform: translateY(-0.25em);
+          transition: 0.25s;
+          // background-color: #89cff0;
+        }
+      }
+
+      .modalLink {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.modalStyles {
+  .chartContainer {
+    border: 0;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .modalDescription {
+    font-size: 1rem;
+    margin-top: 10px;
+
+  }
+
+  .modalDescriptionFourth {
+    font-size: 1rem;
+    margin: 0.8rem 0;
+
+  }
+
+  .FourthModalClose {
+    background: #000 !important;
+    color: red;
+  }
+
+  ul {
+    list-style: circle;
+    font-size: 1rem;
+  }
+
+}
+
+.FourthModalLi {
+  margin-top: 10px;
+}
+
+.count {
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.head {
+  font-size: 13px !important;
+  font-weight: bold;
+}
+
+.tatkalTable {
+  overflow-y: hidden;
+  margin-bottom: 10px;
+}
+
+.big_headers {
+  font-size: 0.85rem !important;
+}
+
+// --------------- new stylesheets ---------------
+.parent {
+  position: relative;
+  display: inline-flex;
+  padding: 20px 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 5px;
+}
+
+.child {
+  padding: 0px 25px !important;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+
+  height: 100%;
+  width: 100%;
+}
+
+.child:hover {
+  transform: scale(1.03);
+}
+
+.parent {
+  justify-content: center;
+  align-items: center;
+}
+
+// Takedown and software analysis section 
+.new_parent {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 5px;
+}
+
+.new_child {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.new_child:hover {
+  transform: scale(1.03);
+}
+
+.table_div {
+  overflow-y: scroll !important;
+  max-height: 20rem !important;
+}
+
+.table_sec {
+  width: 100%;
+  border-collapse: collapse;
+  letter-spacing: 0.5px;
+  // text-transform: uppercase;
+  border-radius: 5px !important;
+}
+
+.table_sec th,
+.table_sec td {
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.table_sec thead th {
+  background-color: #f0f0f0;
+  font-weight: bolder;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase;
+}
+
+.table_sec tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table_sec tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table_content_head {
+  text-align: center;
+  // font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  // font-size: 0.9rem;
+}
+
+// software table 
+.software_table_div {
+  max-height: 25rem;
+  overflow-y: scroll !important;
+}
+
+.software_table_sec {
+  width: 100%;
+  border-collapse: collapse;
+  letter-spacing: 0.5px;
+  border-radius: 5px !important;
+}
+
+.software_table_sec th,
+.software_table_sec td {
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 3rem;
+}
+
+.software_table_sec thead th {
+  background-color: #f0f0f0;
+  font-weight: bolder;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase;
+}
+
+.software_table_sec tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.software_table_sec tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table_content_head {
+  text-align: center;
+  // font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  // font-size: 0.9rem;
+}
+
+.table_div::-webkit-scrollbar {
+  height: 5px !important;
+  width: 7px !important;
+}
+
+/* Thin scrollbar thumb */
+.table_div::-webkit-scrollbar-thumb {
+  background-color: #0b0a0a38 !important;
+}
+
+.software_table_div::-webkit-scrollbar {
+  height: 5px !important;
+  width: 7px !important;
+}
+
+/* Thin scrollbar thumb */
+.software_table_div::-webkit-scrollbar-thumb {
+  background-color: #0b0a0a38 !important;
+}

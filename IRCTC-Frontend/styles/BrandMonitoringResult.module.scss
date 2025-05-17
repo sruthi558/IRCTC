@@ -1,0 +1,250 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Montserrat"), url(/fonts/Montserrat.ttf) format("ttf");
+}
+
+.brandMonitoringCardWrapper {
+  width: 95%;
+  border: 0.1rem solid #f7f7f7;
+  background-color: #ffffff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  font-family: "Montserrat", sans-serif;
+  border-radius: 1rem;  
+
+  .xbutton {
+    height: 1rem;
+    position: relative;
+    float: right;
+    margin-top: -0.5rem;
+    margin-right: -0.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .titleWrapper {
+      float: left;
+      width: 80%;
+      margin-left: 1rem;
+      font-family: "Mulish";
+
+      h5 {
+        padding: 1.25rem 1rem 1rem 0rem;
+        color: #000000;
+      }
+    }
+
+    .showImage {
+      top: 1rem;
+      position: relative;
+      margin-right: 1rem;
+      width: 20%;
+      justify-content: flex-end;
+    }
+
+    .buttonContainer {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+      float: right;
+      position: relative;
+      top: 1rem;
+      margin-right: 1rem;
+
+      .actionButton,
+      .redirectButton {
+        border-radius: 0.5rem;
+        // background-color: rgba(54, 162, 235, 0.2);
+        // border: 0.1rem solid rgb(54, 162, 235);
+        // color: #000000;
+        background-color: #000076;
+        border: 0.1rem solid #000076;
+        color: #ffffff;
+        width: 45%;
+        float: left;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        margin: 0 0.1rem 0 0.1rem;
+      }
+
+      // .actionButton:hover,
+      // .redirectButton:hover {
+      //     background-color: #000076;
+      //     border-color: #000076;
+      //     color: #FFFFFF;
+      //     transition: 0.3s;
+      // }
+    }
+  }
+
+  .brandMonitoringCard {
+    display: flex;
+
+    .imageContainer {
+      width: 50%;
+
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+      .screenshot {
+        width: 50%;
+        max-height: 10rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .noImage {
+        display: flex;
+        justify-content: space-around;
+        height: 10rem;
+        max-height: 10rem;
+        overflow: hidden;
+        opacity: 90%;
+        img {
+          max-height: 10rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+          max-width: 10rem;
+          overflow: hidden;
+          border: 1px #000000;
+        }
+      }
+    }
+
+    .body {
+      position: relative;
+      margin: 1rem 1rem 0 0;
+
+      td {
+        white-space: pre-line;
+        border-style: none;
+
+        .low {
+          background-color: rgba(201, 203, 207, 0.2);
+          border: 0.1rem solid rgb(201, 203, 207);
+          color: rgb(201, 203, 207);
+          width: 5rem;
+          border-radius: 0.2rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        .medium {
+          background-color: rgba(255, 205, 86, 0.2);
+          border: 0.1rem solid rgb(255, 205, 86);
+          color: rgb(255, 205, 86);
+          width: 5rem;
+          border-radius: 0.2rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        .high {
+          background-color: rgba(255, 159, 64, 0.2);
+          border: 0.1rem solid rgb(255, 159, 64);
+          color: rgb(255, 159, 64);
+          width: 5rem;
+          border-radius: 0.2rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        .critical {
+          background-color: rgba(255, 99, 132, 0.2);
+          border: 0.1rem solid rgb(255, 99, 132);
+          color: rgb(255, 99, 132);
+          width: 5rem;
+          border-radius: 0.2rem;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .label {
+        width: 4rem;
+      }
+
+      .link {
+        color: #0000ee;
+        cursor: pointer;
+      }
+    }
+
+    .low {
+      background-color: rgba(201, 203, 207, 0.2);
+      border-color: rgb(201, 203, 207);
+      width: 2rem;
+    }
+
+    .low.actionButton {
+      background-color: rgba(201, 203, 207, 0.2);
+      border-color: rgb(201, 203, 207);
+    }
+
+    .medium {
+      background-color: rgba(255, 205, 86, 0.2);
+      border-color: rgb(255, 205, 86);
+    }
+
+    .high {
+      background-color: rgba(255, 159, 64, 0.2);
+      border-color: rgb(255, 159, 64);
+    }
+
+    .critical {
+      background-color: rgba(255, 99, 132, 0.2);
+      border-color: rgb(255, 99, 132);
+    }
+  }
+}
+
+.display {
+  padding: 1rem 1.5rem 0 0;
+  text-align: right;
+}
+
+.loader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+
+.loader {
+  position: absolute;
+  border: 0.5 solid #f3f3f3;
+  border-top: 2px solid #000076;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  // top: 10%;
+  padding: 20px !important;
+  left: 50%;
+  // margin-top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999 !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.imageContainer{
+  opacity: 90%;
+}

@@ -1,0 +1,68 @@
+/*
+##################################################
+#                                                #
+#                    SIDEBAR                     # 
+#                                                #
+##################################################
+*/
+
+.sidebar {
+
+    height: 100%;
+    max-width: 28rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .sidenav {
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: 2px 0px 6px rgba(75, 62, 62, 0.31);
+        border-right: "solid";
+        background-color: #F7F7FA;
+
+        .logoContainer {
+
+            .logo {
+                width: 60%;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .signout {
+            color: #DC4C64;
+        }
+
+    }
+}
+
+.Footer {
+    width: 22em;
+    position: inherit;
+    bottom: 2.5rem;
+    color: black;
+       border-radius: 6px;
+
+  
+    img {
+      width: 6em;
+    }
+    h4 {
+      font-size: 0.8rem;
+      line-height: 34px;
+      padding-left: 12px;
+      margin-left: 45px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .closeBtn:hover{
+color: #ffff !important;
+  }
+  .closeBtn{
+    border: 5px solid white !important;
+    background: #ffff;
+
+  }

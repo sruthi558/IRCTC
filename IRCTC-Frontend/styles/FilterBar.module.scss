@@ -1,0 +1,345 @@
+/*
+##################################################
+#                                                #
+#                   FilterBar                    # 
+#                                                #
+##################################################
+*/
+
+.filterBar {
+  width: 100%;
+  box-shadow: 0 0.4rem 0.4rem rgba(141, 133, 133, 0.25);
+  display: flex !important;
+  padding: 0 2rem 2rem;
+  background-color: #000076;
+  justify-content: space-between;
+}
+
+.BrandMonFilter {
+  margin-left: -1rem;
+  margin-right: 1rem;
+}
+
+.BrandMonSearch {
+  margin-right: 1rem;
+}
+
+.BrandMonOkSearch {
+  margin-right: 1rem;
+  margin-left: 10px;
+}
+
+.dateRange {
+  margin-top: 8px !important;
+}
+
+.threeButtons {
+  display: flex;
+}
+
+.reportfilterBar {
+  margin-top: 8px;
+}
+
+.reportSearch {
+  width: 150px;
+  height: 35px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.reportOkSearch {
+  width: "50px" !important;
+  height: 38px;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.reportClear {
+  margin-left: 10px;
+  margin-top: 8px;
+  height: 38px;
+}
+  .exportbtn{
+    min-width: 100px;
+    height: 38px;
+    margin-top: 10px;
+  }
+
+  .reportBoardButs_main_div{
+    display: flex;
+    justify-content: end !important;
+    align-items: end  !important;
+  }
+  .reportBoardButs_sub_div{
+    display: flex;
+    justify-content:end !important;
+    align-items: end;
+    gap: 10px;
+  }
+  .softwareProBoardButs_main_div{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+  }
+  .softwareProBoardButs_sub_div{
+    display: flex !important;
+    justify-content: end !important;
+    align-items: end;
+    gap: 10px;
+  }
+  .softwareProBoardButs_three_btn_div{
+    display: flex !important;
+    justify-content:end !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brandMonBoardButs_sub_div{
+    display: flex;
+    gap: 10px;     
+  }
+
+  .brandMonSearchStyle{
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+
+  .toutsBut_main_div {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+  
+  .toutsBut_sub_div {
+    display: flex;
+    justify-content: flex-end !important;
+    margin-right: 13rem !important;
+    margin-top: -6.7rem !important;
+    gap: 10px;
+  }
+  
+  .toutsSearchInput {
+    height: 2.4rem;
+  }
+  .toutexportbtn{
+    width: 10rem;
+  }
+@media (min-width:700px) and (max-width:740px) {
+
+  .dateRange {
+    width: 50% !important;
+  }
+
+  .BrandMonFilterDate {
+    width: 75%;
+  }
+
+  .BrandMonSearch {
+    margin-left: -4rem;
+  }
+
+  .BrandMonOkSearch {
+    margin-top: 4rem;
+    margin-left: -15rem;
+  }
+
+  .BrandMonSearchClear {
+    margin-top: 4rem !important;
+  }
+
+  .tableLength {
+    background: black;
+  }
+
+  .reportSearch {
+    margin-left: -40px;
+  }
+
+  .reportfilterBar {
+    margin-top: 5rem;
+    margin-left: -4.8rem;
+  }
+
+  .reportOkSearch {
+    margin-top: 5rem;
+    margin-left: -12rem;
+  }
+
+  .reportClear {
+    margin-top: 5rem;
+    margin-left: -14rem;
+  }
+}
+
+@media (min-width:741px) and (max-width:768px) {
+
+  .BrandMonFilterDate {
+    width: 75%;
+  }
+
+  .BrandMonSearch {
+    margin-left: -4rem;
+  }
+
+  .BrandMonOkSearch {
+    margin-left: -7px;
+  }
+
+  .BrandMonSearchClear {
+    margin-top: 3rem;
+    margin-left: -7.5rem;
+  }
+
+  .dateRange {
+    width: 35% !important;
+  }
+
+  .reportSearch {
+    margin-left: -60px;
+  }
+
+  .reportfilterBar {
+    margin-top: 8px;
+  }
+
+  .reportOkSearch {
+
+    margin-top: 4rem;
+    margin-left: -12rem;
+  }
+
+  .reportClear {
+    margin-top: 4rem;
+    margin-left: 0.6rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width:868px) {
+
+  .BrandMonFilterDate {
+    width: 75%;
+  }
+
+  .BrandMonSearch {
+    margin-left: -4rem;
+  }
+
+  .BrandMonSearchClear {
+    margin-top: 3rem;
+    margin-left: -7.5rem;
+  }
+
+  .reportSearch {
+    margin-left: -1.5rem;
+  }
+
+  .reportfilterBar {
+    margin-left: -5rem;
+    margin-top: 4.1rem;
+  }
+
+  .reportOkSearch {
+    margin-top: 4rem;
+    margin-left: -18rem;
+  }
+
+  .reportClear {
+    margin-top: 4rem;
+    margin-left: 0.6rem;
+  }
+  .reportDatePicker{
+    margin-left: -3px !important;
+  }
+
+}
+
+@media (min-width: 869px) and (max-width:1000px) {
+
+  .BrandMonFilterDate {
+    width: 75%;
+  }
+
+  .BrandMonSearch {
+    margin-left: -4rem;
+  }
+
+  .reportSearch {
+    margin-left: -1.5rem;
+  }
+
+  .reportfilterBar {
+    margin-left: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .reportOkSearch {
+    margin-top: 4rem;
+    margin-left: -14rem;
+  }
+
+  .reportClear {
+    margin-top: 4rem;
+    margin-left: 1rem;
+  }
+  .reportDatePicker{
+    margin-left: -3px !important;
+  }
+}
+
+@media (min-width: 1001px) and (max-width:1070px) {
+
+  .reportSearch {
+    margin-left: -1.5rem;
+  }
+
+  .reportfilterBar {
+    margin-right: 10px;
+    margin-top: 0.5rem;
+    margin-right: 15px;
+  }
+
+  .reportClear {
+    margin-left: -6rem;
+    margin-top: 4rem;
+  }
+  .reportDatePicker{
+    margin-left: -3px !important;
+  }
+
+}
+
+@media (min-width: 1071px) and (max-width:1100px) {
+
+  .reportSearch {
+    margin-left: -1.5rem;
+  }
+
+  .reportfilterBar {
+    margin-top: 0.5rem;
+    margin-right: 15px;
+
+  }
+
+  .reportClear {
+    margin-left: 10px;
+  }
+  .reportDatePicker{
+    margin-left: -3px !important;
+  }
+
+}
+
+@media (min-width: 1101px) and (max-width:1200px) {
+  .reportfilterBar {
+    margin-top: 8px;
+  }
+
+  .reportOkSearch {
+    margin-left: 10px;
+    margin-top: 8px;
+  }
+
+  .reportClear {
+    margin-left: 1rem;
+  }
+}

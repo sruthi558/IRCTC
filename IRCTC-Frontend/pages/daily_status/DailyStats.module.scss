@@ -1,0 +1,538 @@
+.dashboard {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f6f6f6;
+
+  .page {
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+}
+
+.calender {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  margin-left: 10px;
+}
+
+.cardscontainer {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif, 'Montserrat';
+  letter-spacing: 0.7px;
+
+  .card {
+    background-color: #f1f1f1;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(33.33% - 10px); 
+    height: 120px;
+    margin: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    font-family: sans-serif, 'Montserrat';
+
+    .cardtitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      text-align: center;
+    }
+
+
+    .cardcontent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .label {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+
+.regdiv {
+  background: rgba(128, 128, 128, 0.379);
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 1px 2.94px 0.06px rgba(29, 29, 29, 0.518);
+  letter-spacing: 0.7px;
+  font-family: sans-serif, 'Montserrat';
+
+  .headname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 5px;
+    background: #1b1996c4;
+    color: white;
+    height: 3.5rem;
+    border-radius: 5px;
+  }
+}
+
+.secondCards {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 20px;
+  width: calc(33.33% - 10px); // Adjust the width as per your requirements
+
+  margin-top: 10px;
+  margin: 10px;
+  box-shadow: 0 1px 3.94px 0.06px rgba(49, 48, 48, 0.518);
+
+  .secondcardTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: sans-serif, 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .secondcountCard {
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
+
+
+
+    .secondcount {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center !important;
+      margin-top: 5px;
+    }
+
+    .secondlabel {
+      font-size: 16px;
+    }
+  }
+}
+
+.bookline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  background: #1b1996c4;
+  color: white;
+  height: 3.5rem;
+  border-radius: 5px;
+}
+
+.vpsDiv {
+  align-items: center;
+  margin-top: 20px;
+  background-color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.729);
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 2.94px 0.06px rgba(6, 30, 55, 0.20);
+  border-radius: 5px;
+  height: 100%;
+  padding: 15px !important;
+}
+
+.vpsHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.nonvpsdiv {
+  align-items: center;
+  margin-top: 20px;
+  background-color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.729);
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 2.94px 0.06px rgba(6, 30, 55, 0.20);
+  border-radius: 5px;
+  padding: 15px !important;
+}
+
+
+.mainTableDiv {
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif, 'Montserrat';
+ 
+}
+
+.tableWrapper {
+
+  width: calc(30.33% - 10px);
+  height: 7rem;
+}
+
+.tableheading {
+   background: #4644c3dc;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  width: 92%;
+  margin-left: 9px;
+ 
+}
+
+.tableColumn {
+  width: calc(33.33% - 10px);
+
+}
+
+.subHeading {
+  font-size: 20px;
+  color: #000000a7;
+  text-align: end;
+  font-weight: bold;
+  width: calc(35.33% - 10px);
+
+}
+
+.subValues {
+  display: flex;
+  justify-content: space-evenly;
+  // align-items: end;
+  text-align: center !important;
+  font-size: 18px;
+  color: #000000a2;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 12px !important;
+  width: 100vw;
+}
+
+.mainTable {
+  background: #000;
+}
+
+.subcontainer {
+  height: 13rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  margin-left: 50px;
+
+  margin: -25px 0px;
+}
+
+.cardcontent {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cardcontentsec {
+  margin-top: 30px;
+  font-size: 30px;
+  // font-weight: bold;
+  font-family: sans-serif, 'Montserrat' !important;
+}
+.cardtitlesec {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 21px;
+  text-align: center;
+  color: #000000b6;
+  font-family: sans-serif, 'Montserrat';
+
+}
+
+.verticalRule{
+  border-right: 1px solid #2320209a;
+  height: 100px;
+}
+
+.countsec{
+  font-size: 27px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  margin-top: -26px;
+}
+// Media Query for responsiveness
+@media screen and (max-width: 768px) {
+  .cards-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(100% - 20px); // Adjust the width as per your requirements
+    margin-bottom: 20px;
+  }
+}
+
+// Media Query for responsiveness
+@media screen and (max-width: 768px) {
+  .cardscontainer {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(50% - 20px); // Adjust the width as per your requirements
+    margin-bottom: 20px;
+  }
+}
+
+
+// ########################### MAIN SECTION ###########################
+.main_parent {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  font-family: "Montserrat", sans-serif;
+  margin: 20px 10px;
+  border: 0.5px solid #ccc;
+}
+
+.main_child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  background-color: #ffffff;
+  // border: 0.5px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  
+  margin: 0px 5px !important;
+}
+
+.main_child:hover {
+  transform: scale(1.05);
+}
+
+.main_div_header {
+  margin: 5px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.main_div_number {
+  margin: 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.main_child {
+  margin: 0;
+  line-height: 1.3;
+}
+
+// ########################### USER REG. SECTION ###########################
+
+.user_reg_container {
+  margin: 20px 10px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
+
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user_reg_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user_reg_title {
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.user_reg_child_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user_reg_child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 0px 5px;
+}
+
+.user_reg_child:hover {
+  transform: scale(1.05);
+}
+
+.user_reg_child_header {
+  margin: 5px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.user_reg_child_number {
+  margin: 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.user_reg_child p {
+  margin: 0;
+  line-height: 1.3;
+  padding: 5px;
+}
+
+// ########################### PNR Booking Statistics ###########################  
+
+.pnr_main_container {
+  margin: 20px 10px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.pnr_header_title {
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.pnr_data_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.pnr_data_container:hover {
+  transform: scale(1.035);
+}
+
+.data_table {
+  width: 100%;
+  border-collapse: collapse;
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.data_table th, .data_table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.data_table thead th {
+  background-color: #f0f0f0;
+  font-weight: bolder;
+
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase;
+}
+
+.data_table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data_table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+// ########################### Custom Loader ###########################
+
+.loader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100px;
+}
+
+.loader {
+  border: 0.5 solid #f3f3f3;
+  border-top: 2px solid #000076;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// ########################### Custom Alert Style ###########################
+.custom-toast {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.custom-toast-body {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}

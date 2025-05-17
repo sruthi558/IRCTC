@@ -1,0 +1,524 @@
+/*
+##################################################
+#                                                #
+#            Suspicious Ip Adress                # 
+#                                                #
+##################################################
+*/
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat'), url(/fonts/Montserrat.ttf) format('ttf');
+}
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f6f6f6;
+
+  .page {
+    width: 100%;
+    overflow-y: scroll;
+
+    .cardsRow {
+      margin: 1.5rem 0.7rem 0;
+      background-color: #f6f6f6;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      .cardContainer {
+        border: 0;
+
+        .questionmark {
+          opacity: 0.2;
+          height: 1rem;
+          width: auto;
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem;
+          z-index: 2;
+        }
+
+        .cardOne,
+        .cardTwo,
+        .cardThree {
+          position: relative;
+          -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          border: none;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          width: calc(100%);
+          height: 10rem;
+          overflow: hidden;
+          z-index: 2;
+          color: #000000;
+          margin-bottom: 0.25rem;
+
+          .questionmark {
+            opacity: 0.2;
+            height: 1rem;
+            width: auto;
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 2;
+          }
+
+          h6 {
+            font-size: 1rem;
+            opacity: 0.7;
+          }
+
+          p {
+            font-size: 2.5rem;
+            bottom: 0;
+            opacity: 0.7;
+          }
+
+          .subnet,
+          .ticket,
+          .newfound,
+          .network {
+            filter: sepia(9%) saturate(3892%) hue-rotate(102deg)
+              brightness(112%) contrast(92%);
+            width: 2rem;
+            height: auto;
+            opacity: 0.5;
+            z-index: 1;
+            margin-top: -1rem;
+            color: yellow;
+          }
+
+          .network,
+          .newfound {
+            transform: none;
+          }
+        }
+      }
+
+      .cardOne,
+      .cardTwo,
+      .cardThree {
+        position: relative;
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        border: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        height: 10rem;
+        overflow: hidden;
+        z-index: 2;
+        color: #000000;
+
+        .questionmark {
+          opacity: 0.2;
+          height: 1rem;
+          width: auto;
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem;
+          z-index: 2;
+        }
+
+        h6 {
+          font-size: 1rem;
+          opacity: 0.7;
+        }
+
+        p {
+          font-size: 2.5rem;
+          bottom: 0;
+          opacity: 0.7;
+        }
+
+        .subnet,
+        .ticket,
+        .newfound,
+        .network {
+          filter: sepia(9%) saturate(3892%) hue-rotate(102deg) brightness(112%)
+            contrast(92%);
+          width: 2rem;
+          height: auto;
+          opacity: 0.5;
+          z-index: 1;
+          margin-top: -1rem;
+          color: yellow;
+        }
+
+        .network,
+        .newfound {
+          transform: none;
+        }
+      }
+    }
+
+    .cardsRowTop {
+      margin: 1rem 0.5rem 0;
+      background-color: #f6f6f6;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media only screen and (max-width: 1440px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: 1200px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .cardContainer {
+        border: 0;
+        display: block;
+
+        .questionmark {
+          opacity: 0.2;
+          height: 1rem;
+          width: auto;
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem;
+          z-index: 2;
+        }
+      }
+    }
+
+    .dailyrow {
+      margin: 1.5rem 0.7rem 0rem 0.7rem;
+      padding: 0.5rem;
+      border: 0;
+      background-color: #ffffff;
+    }
+
+    .chartsContainer {
+      padding: 1rem 2rem;
+      width: 100%;
+      height: auto;
+      display: grid;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, 1fr);
+
+      .chart {
+        border: 0.1rem solid #000076;
+        color: #000000;
+        padding: 0.5rem;
+      }
+    }
+
+    .tableContainer {
+      padding: 1rem;
+
+      .actionButtonContainer {
+        height: 100%;
+
+        button {
+          padding: 0.2rem;
+          font-size: 0.9rem;
+        }
+
+        .flagButton {
+          margin-right: 1rem;
+        }
+      }
+
+      .tagBubble {
+        display: flex;
+
+        p {
+          background-color: #000076;
+          color: #ffffff;
+          margin: 0 0.2rem;
+          padding: 0.2rem 0.5rem;
+          border-radius: 1rem;
+        }
+      }
+
+      .pagination {
+        padding: 1rem 0.2rem;
+      }
+    }
+  }
+}
+
+*.tagBubble {
+  display: flex;
+
+  p {
+    background-color: #000076;
+    color: #ffffff;
+    margin: 0 0.2rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+  }
+}
+
+.pagination {
+  padding: 1rem 0.2rem;
+}
+
+.heading{
+  margin-left: 15rem;
+}
+
+.label{
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+.viewHeader{
+  display: flex;
+justify-content: start;
+margin-top: 20px;
+
+}
+.viewSearchBtn{
+  width: 100px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.allBtn{
+  display: flex;
+  justify-content: space-evenly !important;
+  flex-direction: row;
+  margin-top: 8px;
+}
+.datePicker{
+display: flex;
+justify-content: space-between;
+margin-right: 2rem;
+margin-top: 8px;
+}
+.exportBtn {
+  margin-top: -8px;
+}
+.loadingContainer{
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 400px;
+ }
+.loadingOverlay {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.loadingPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loadingContent {
+  text-align: center;
+}
+.loadingText{
+  color: rgb(8, 7, 7);
+  font-size: 20px;
+  font-weight: bold;
+}
+.circle{
+  color: black;
+}
+.clear{
+  cursor: pointer;
+  background: rgba(128, 128, 128, 0.266);
+  float: inline-end !important;
+  font-size: 1.4rem;
+  font-weight: bold !important;
+  border-radius: 50%;
+  padding:5px;
+  margin-bottom: -10px;
+  }
+
+@media (min-width: 701px) and (max-width:769px) {
+ .allBtn{
+    display: flex;
+    justify-content: space-evenly !important;
+    flex-direction: row;
+    margin-top: 4rem;
+    margin-left: -14rem;
+  }
+  .dropdown {
+    margin-left: -15px !important;
+    width: 50% !important;
+  }
+
+  .datePicker{
+  width: 50% !important;
+  margin-right: 4rem !important;
+  margin-top: 10px;
+
+  }
+  .searchBtn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 15px !important;
+  }
+
+  .exportBtn {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 768px) and (max-width:868px) {
+
+  .allBtn{
+    display: flex;
+    justify-content: space-between !important;
+    flex-direction: column;
+    margin-left: -14rem;
+  }
+  .dropdown {
+    margin-left: -15px !important;
+    width: 50% !important;
+  }
+
+  .datePicker{
+  width: 40% !important;
+  margin-right: 13rem !important;
+  margin-top: 10px;
+
+  }
+  .searchBtn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 1.6rem;
+  }
+
+  .exportBtn {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 1.3rem;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 869px) and (max-width:920px) {
+
+  .allBtn{
+    display: flex;
+    justify-content: space-between !important;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    margin-left: -3rem;
+  }
+  .dropdown {
+    margin-left: -15px !important;
+    width: 50% !important;
+  }
+
+  .datePicker{
+  width: 38% !important;
+  margin-right: 3rem !important;
+  margin-top: 8px;
+
+  }
+  .searchBtn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 5px;
+  }
+
+  .exportBtn {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 921px) and (max-width:1024px) {
+
+  .allBtn{
+    display: flex;
+    justify-content: space-between !important;
+    flex-direction: row;
+    margin-top: 0.6rem;
+    margin-left: -6rem;
+  }
+  .dropdown {
+    margin-left: -15px !important;
+    width: 50% !important;
+  }
+
+  .datePicker{
+  width: 30% !important;
+  margin-right: 5rem !important;
+  margin-top: 10px;
+
+  }
+  .searchBtn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 1.7rem;
+  }
+
+  .exportBtn {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1025px) and (max-width:1400px) {
+
+  .allBtn{
+    display: flex;
+    justify-content: space-between !important;
+    flex-direction: row;
+    margin-top: 0.6rem;
+    margin-left: -6rem;
+  }
+  .dropdown {
+    margin-left: -15px !important;
+    width: 50% !important;
+  }
+
+  .datePicker{
+  margin-right: 5rem !important;
+  margin-top: 10px;
+
+  }
+  .searchBtn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 1.7rem;
+  }
+
+  .exportBtn {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.searchContainer{
+  margin-top: 10px;
+  height:30px
+}
+
+
+

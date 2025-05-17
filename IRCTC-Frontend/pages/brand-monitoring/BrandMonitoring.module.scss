@@ -1,0 +1,288 @@
+/*
+##################################################
+#                                                #
+#                   DASHBOARD                    # 
+#                                                #
+##################################################
+*/
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Montserrat"), url(/fonts/Montserrat.ttf) format("ttf");
+}
+
+.modal {
+  font-family: "Mulish", sans-serif;
+}
+
+.dashboard {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  font-family: "Mulish", sans-serif;
+  background-color: #f6f6f6;
+
+  .sidebarWrapper {
+    min-width: 18rem;
+  }
+
+  .page {
+    width: 100%;
+    overflow-y: scroll;
+
+    .cardsRow {
+      margin: 1.5rem 1rem;
+      font-family: "Mulish", sans-serif;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 2rem;
+      cursor: pointer;
+      .cardOne,
+      .cardTwo,
+      .cardThree {
+        position: relative;
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        border: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        // width: calc(100% / 2.1);
+        height: 10rem;
+        overflow: hidden;
+        z-index: 2;
+        color: #000000;
+
+        .questionmark {
+          opacity: 0.2;
+          height: 1rem;
+          width: auto;
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem;
+          z-index: 2;
+        }
+
+        h6 {
+          font-size: 1rem;
+          opacity: 0.7;
+        }
+
+        p {
+          font-size: 2.5rem;
+          bottom: 0;
+          opacity: 0.7;
+        }
+
+        .subnet,
+        .ticket,
+        .newfound,
+        .network {
+          filter: sepia(9%) saturate(3892%) hue-rotate(102deg) brightness(112%) contrast(92%);
+          transform: rotate(20deg);
+          width: 2rem;
+          height: auto;
+          opacity: 0.5;
+          z-index: 1;
+          margin-top: -1rem;
+          color: yellow;
+        }
+
+        .network,
+        .newfound {
+          transform: none;
+        }
+      }
+    }
+
+    .brandMonitoringGrid {
+      margin: 1.5rem 0.7rem 0;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: normal;
+
+      @media only screen and (max-width: 1366px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .brandMonitoringCardWrapper {
+        display: flex;
+        justify-content: center;
+        // width: 95%
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.loadingText {
+  display: flex;
+  justify-content: start;
+  font-weight: bold;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.loadingOverlay {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.loadingPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loadingContent {
+  text-align: center;
+}
+
+.loadingText {
+  color: rgb(8, 7, 7);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.circle {
+  color: black;
+}
+
+//  New Section CSS start here
+.searchInput {
+  width: 12rem !important;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.mainActionDiv {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+.subActionDiv {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.label1 {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between !important;
+  margin-bottom: 1.5rem;
+  margin-right: 6px;
+  margin-left: 5px;
+}
+
+.label {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between !important;
+  margin-bottom: 1.5rem;
+  margin-right: -10px;
+  margin-left: 20px;
+}
+
+.modalHeader {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mainModalCalenderBtn {
+  display: flex;
+  justify-content: end !important;
+  align-items: center !important;
+  margin-top: -3.5rem;
+}
+
+.subModalCalenderBtn {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.tableFooter {
+  margin-bottom: -10px;
+  margin-top: 15px !important;
+}
+
+.processStyle {
+  color: rgb(68, 244, 68);
+  // font-weight: bold;
+}
+
+.loader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+
+.loader {
+  position: absolute;
+  border: 0.5 solid #f3f3f3;
+  border-top: 2px solid #000076;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  padding: 20px !important;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 9999 !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.clear{
+  cursor: pointer;
+  background: rgba(128, 128, 128, 0.266);
+  float: inline-end !important;
+  font-size: 1.4rem;
+  font-weight: bold !important;
+  border-radius: 50%;
+  padding:5px;
+  margin-bottom: -10px;
+  }

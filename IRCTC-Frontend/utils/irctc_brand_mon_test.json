@@ -1,0 +1,413 @@
+[
+  {
+  "_id": {
+    "$oid": "63639e85664c99fe32b86757"
+  },
+  "ProfileImage": "https://scontent.fmaa1-4.fna.fbcdn.net/v/t1.6435-1/201899955_101490195516991_7386354680134401619_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=ZMjE2G92Gi4AX8hpIZy&tn=hXsXNAdLJKTIbbV-&_nc_ht=scontent.fmaa1-4.fna&oh=00_AT-C4TovAlTpI1Eg3VQtpGOtZzGnhOJN4QVY8sPXsC_NJw&oe=62E8DAD5",
+  "ProfileName": "Irctc E-ticket",
+  "Link": "https://www.facebook.com/profile.php?id=100069680314280&__tn__=%3C",
+  "Content": [
+    "Studied at Indian Railways",
+    "Lives in Delhi, India",
+    "From Delhi, India"
+  ],
+  "indicators": [
+    "Brand Name Misuse",
+    "Name Matches in posts"
+  ],
+  "threat_score": 2,
+  "threatSeverity": "Medium",
+  "threat": "true",
+  "threatSource": "FB",
+  "threatType": [
+    "SM account impersonation"
+  ],
+  "category": "People",
+  "search_key": [
+    "irctc"
+  ],
+  "title": "",
+  "td_status": 2,
+  "deeper_analysis": false,
+  "false_positive": false,
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63639e75664c99fe32b86754"
+  },
+  "ProfileName": "IRCTC Tirupati",
+  "Link": "https://www.facebook.com/IRCTC-Tirupati-257265244819090/",
+  "ProfileImage": "https://scontent.fmaa6-1.fna.fbcdn.net/v/t1.6435-1/34341827_258208808058067_7109876861659774976_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=101&ccb=1-7&_nc_sid=1eb0c7&_nc_ohc=hkEn41HdWDUAX-Atkq6&_nc_ht=scontent.fmaa6-1.fna&oh=00_AT9umy2uw5K5BASnSv41i1uGvOkXFN_Cb-ov45soEYksNQ&oe=62EB73B2",
+  "indicators": [
+    "Brand Name misuse",
+    "Logo Match",
+    "Brand Logo or Brand name matches in posts",
+    "Brand name Mention in Description"
+  ],
+  "Content": [
+    ""
+  ],
+  "threat_score": 4,
+  "threatSeverity": "Critical",
+  "threat": "true",
+  "threatSource": "FB",
+  "threatType": [
+    "SM account impersonation"
+  ],
+  "category": "Pages",
+  "search_key": [
+    "irctc"
+  ],
+  "title": "",
+  "td_status": 1,
+  "deeper_analysis": false,
+  "false_positive": false,
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63ad3848056e8c750259c148"
+  },
+  "ProfileName": "IRCTC RAILWAY AGENT",
+  "Link": "https://www.facebook.com/groups/1212026409247041/",
+  "Content": [
+    "IRCTC RAILWAY AGENT"
+  ],
+  "indicators": [
+    "Brand Name misuse",
+    "Brand name Mention in Description",
+    "Brand name matches in posts"
+  ],
+  "threat_score": 3,
+  "threatSeverity": "High",
+  "threat": "true",
+  "threatSource": "FB",
+  "threatType": [
+    "SM account impersonation"
+  ],
+  "category": "Groups",
+  "search_key": [
+    "irctc"
+  ],
+  "title": "",
+  "td_status": 1,
+  "deeper_analysis": false,
+  "false_positive": false,
+  "ProfileImage": "https://scontent.fmaa6-1.fna.fbcdn.net/v/t39.30808-6/279265788_5227130807400988_7380776389329718300_n.jpg?stp=cp0_dst-jpg_p64x64&_nc_cat=107&ccb=1-7&_nc_sid=70495d&_nc_ohc=hjnKhtWTa3sAX85ROZW&_nc_ht=scontent.fmaa6-1.fna&oh=00_AT_C5Mf5YNDlpPVijqtbL7ezH4Vctq1dBbyyB1OumONjoA&oe=62CA9CA6",
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63ad3911056e8c750259c14c"
+  },
+  "ProfileName": "irctctourismguwahati",
+  "Link": "https://instagram.com/irctctourismguwahati",
+  "Content": [
+    "Official page of IRCTC Tourism Guwahati  Office \nIRCTC Regional office\n4D Mandovi Apartments.\nGNB Road, Ambari. Opp. Rabindra Bhawan\nGuwahati 781001"
+  ],
+  "ProfileImage": "https://instagram.fmaa6-1.fna.fbcdn.net/v/t51.2885-19/273482937_328898455669460_3997928671781748356_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fmaa6-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=r4MsPrI4ETcAX9ArOTC&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9Gmz-f5X11Awia7wx8i4Mh85mEDES5Nolm7NtHfY9YoQ&oe=630C2680&_nc_sid=8fd12b",
+  "indicators": [
+    "Brand name Misuse",
+    "Logo match"
+  ],
+  "threat_score": 2,
+  "threatSeverity": "Medium",
+  "threat": "true",
+  "threatSource": "Instagram",
+  "threatType": [
+    "SM account impersonation"
+  ],
+  "category": "Account",
+  "search_key": [
+    "irctc"
+  ],
+  "title": "",
+  "td_status": 1,
+  "deeper_analysis": false,
+  "false_positive": false,
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63639eea664c99fe32b8676e"
+  },
+  "ProfileImage": "https://pbs.twimg.com/profile_images/922428420809670656/f5hgaq2E_normal.jpg",
+  "Name": "IRCTC Login",
+  "Content": [
+    "IRCTC login online reservation e ticket related page. https://t.co/wIHTL4VOpg"
+  ],
+  "active_since": "2009-12-20 10:51:45 UTC",
+  "tweets": 1198,
+  "location": "New Delhi, India",
+  "following": 28,
+  "followers": 898,
+  "likes": 123,
+  "media": 126,
+  "private": "false",
+  "Link": "https://twitter.com/irctcloginpage",
+  "indicators": [
+    "Brand Name Misuse",
+    "Logo Match",
+    "Cover picture match",
+    "brand logo or name matches in post"
+  ],
+  "threat_score": 4,
+  "threatSeverity": "Critical",
+  "threat": "true",
+  "threatSource": "Twitter",
+  "threatType": [
+    "SM account impersonation"
+  ],
+  "category": "People",
+  "search_key": [
+    "irctc"
+  ],
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63294ca4f410961a414c4499"
+  },
+  "ProfileName": "tatkal8832",
+  "ProfileImage": "",
+  "indicators": [
+    ""
+  ],
+  "threat_score": 2,
+  "threatSeverity": "Medium",
+  "Link": "https://t.me/tatkal8832",
+  "title": "RAILWAY ALL SOFTWARE AND AGENT",
+  "Content": [
+    "NOTE ALL TYPES OF TATKAL TICKET AND SOFTWARE AVAILABLE STUDENT FIELD TRUSTED BOY"
+  ],
+  "deeper_analysis": false,
+  "false_positive": false,
+  "search_key": [
+    "irctc"
+  ],
+  "td_status": 1,
+  "threatSource": "Telegram",
+  "threatType": [
+    "tout"
+  ],
+  "category": "Channel",
+  "threat": "true",
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63639e0a664c99fe32b86749"
+  },
+  "ProfileName": "RAVAN ADMIN",
+  "Content": "DEAR USER AAP SABHI SE ANURODH HAI KI AAP LOG TPRO USE KARO AAPKO MARKET K SABHI SOFTWARE SE ACHA RESULT DEGA TPRO FREE KEY AVI DE RAHE HAI AAP LOG TELEGRAM CHANNEL JOIN KAR K TPRO FREE KEY USE KAR SAKTE HO USHKE BAAD KEY KO PAID KARBA SAKTE HO BAKI VIDEO ME FULL SETUP DIYA HUAA HAI AAP LOG FULL WATCH KARO AUR CHANNEL KO SUBCRIBE KAR LIGYE \nMAIN RAVAN ADMIN AAP SABHI KO WAGAGAT KARTE HAI AAPNE CHANNEL PE \nTELEGRAM CHANNEL LINK AAP LOG JARUR JOIN KARO    :- https://t.me/ravan1000\nWHATAAP CONTECT  ;- https://wa.me/+18134219999\n\nwhataap number :-  +1 8134219999\n",
+  "Link": "https://www.youtube.com/channel/UCRMRpZVIVGWwzmuVeRo2n9Q",
+  "parsed_data_all": {
+    "whatsapp_group_links": [],
+    "whatsapp_links": [
+      "https://wa.me/+18134219999"
+    ],
+    "telegram_links": [
+      "https://t.me/ravan1003"
+    ],
+    "links": [],
+    "mobile_numbers": [
+      "+1 8134219999",
+      "+18134219999"
+    ]
+  },
+  "threatType": [
+    "tout"
+  ],
+  "threatSource": "Youtube",
+  "false_positive": "",
+  "td_status": 1,
+  "category": "Channel",
+  "deeper_analysis": false,
+  "search_key": [
+    "Irctc"
+  ],
+  "threat": "true",
+  "threat_score": 2,
+  "threatSeverity": "Medium",
+  "indicators": [
+    ""
+  ],
+  "ProfileImage": "https://d1zqjduhs4n3f5.cloudfront.net/youtube/channel_ss/UCRMRpZVIVGWwzmuVeRo2n9Q.png",
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63087cb2cdc8bca50ee5efcd"
+  },
+  "ProfileName": "irctc-connect.apk",
+  "Link": "https://irctc-connect.fileplanet.com",
+  "ProfileImage": "",
+  "Content": "",
+  "threat": "true",
+  "threatSeverity": "High",
+  "indicators": [
+    "Certificate Mismatch",
+    "Version Mismatch"
+  ],
+  "threatSource": "Mobile",
+  "threatType": "Fake Application",
+  "category": "APK",
+  "title": "",
+  "td_status": 1,
+  "deeper_analysis": false,
+  "false_positive": false,
+  "search_key": [
+    "irctc"
+  ],
+  "threat_score": 2,
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "62556831cccff3ac14c53b47"
+  },
+  "ProfileName": "www.irctc_phish.com",
+  "ProfileLink": "",
+  "Content": [
+    ""
+  ],
+  "Link": "www.irctc_phish.com",
+  "search_key": [
+    "irctc"
+  ],
+  "threat": "true",
+  "title": "",
+  "indicators": [
+    "password found",
+    "email address with brand domain found",
+    "phone number found"
+  ],
+  "threat_score": 3,
+  "threatSeverity": "Critical",
+  "threatType": "Dark web mention",
+  "threatSource": "Dark web",
+  "false_positive": false,
+  "td_status": 1,
+  "deeper_analysis": false,
+  "ProfileImage": "",
+  "create_dt": {
+    "$date": {
+      "$numberLong": "1672389092881"
+    }
+  },
+  "td_req_dt": {
+    "$date": {
+      "$numberLong": "1672389119031"
+    }
+  },
+  "td_comp_dt": {
+    "$date": {
+      "$numberLong": "1672389122645"
+    }
+  }
+}]

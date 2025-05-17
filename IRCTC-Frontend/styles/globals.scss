@@ -1,0 +1,435 @@
+@use "./variables" as v;
+//Font imports
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat'), url(/fonts/Montserrat.ttf) format('ttf');
+}
+
+//Global Variables
+$fontFamilySourceSansPro: "Source Sans Pro", sans-serif;
+$fontFamilyRoboto: "Roboto", sans-serif;
+$fontFamilyArimo: "Arimo", sans-serif;
+$fontFamilyMontserrat: "Montserrat", sans-serif;
+
+$fontFamilyWorkSans: "Work Sans", sans-serif;
+
+$asideWidth: 260px;
+$navHeight: 100px;
+
+
+$dashboardBackground: #f5f5f5;
+$dashboardAsideBackground: #ffffff;
+$dashboardAsideActiveBackground: #e8eefe;
+$textColorGreyMain: #3a3a49;
+// $buttonBackgroundUpdate: #13c20f;
+$buttonBackgroundUpdate: #399df8;
+$inputBackground: #e8e9ee;
+// $buttonBackground
+//Global resets
+$primaryButtonBackground: linear-gradient(
+  93.48deg,
+  #1b59f8 -49.47%,
+  #3199ff 163.59%
+);
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Red+Hat+Display:wght@400;600&family=Maven+Pro:wght@400;600&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  color: black;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  height: 100vh;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Arimo", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamilyWorkSans;
+  height: 100vh;
+}
+
+button {
+  outline: none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.paperContainer {
+  box-shadow: 0 4px 6px hsla(0, 0, 0, 0.1), 0 12px 16px hsla(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  height: 100vh;
+}
+
+.loadMore {
+  display: flex;
+  gap: 2px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  flex-direction: row;
+  background-color: v.$blue-active;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 50px;
+
+  flex-grow: 0;
+  & > div {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 100%;
+    flex-grow: 0;
+  }
+}
+
+.containerMain {
+  background-color: v.$blue-100;
+  padding-top: 40px;
+  min-width: 100%;
+  min-height: 100%;
+  padding-bottom: 40px;
+}
+
+.animateLoadingButton {
+  & > div {
+    animation: loading 1s cubic-bezier(0.12, 0, 0.39, 0) infinite;
+  }
+
+  @for $i from 1 to 3 {
+    & > div:nth-child(#{$i}) {
+      animation-delay: $i * 0.2s;
+    }
+  }
+}
+
+.globalLoadingContainer {
+  .ldsRing {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid transparentize(white, 0.5);
+    background: transparentize(white, 0.5);
+    background-color: transparentize(white, 0.8);
+    backdrop-filter: blur(40px);
+    height: 100px;
+    border-radius: 100%;
+  }
+}
+.Top-nav {
+  height: $navHeight;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .page-title {
+    height: $navHeight;
+    display: flex;
+    img {
+      display: block;
+      margin: auto 4px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    span {
+          font-family: $fontFamilyWorkSans;
+          font-size: 300%;
+          font-weight: 700;
+          color: #3a3a49;
+          display: block;
+          margin: auto 8px;
+          align-self: center;
+        }
+  }
+}
+aside {
+  display: flex;
+  margin-left: 0;
+  flex-direction: column;
+  min-width: $asideWidth;
+  height: 100%;
+  position: fixed;
+  background-color: $dashboardAsideBackground;
+  font-family: $fontFamilyWorkSans;
+  font-weight: 500;
+}
+
+main {
+  background-color: #f5f5f5;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  background-color: $dashboardBackground;
+  flex: 1;
+  min-height: 100vh;
+  margin-left: $asideWidth;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 0;
+}
+
+.globalLoadingContainer {
+  .ldsRing {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid transparentize(white, 0.5);
+    background: transparentize(white, 0.5);
+    background-color: transparentize(white, 0.8);
+    backdrop-filter: blur(40px);
+    height: 100px;
+    border-radius: 100%;
+  }
+}
+
+.ldsRing div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: ldsRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: v.$blue-400 transparent transparent transparent;
+}
+
+.ldsRing div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.ldsRing div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.ldsRing div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 90%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 50%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(75, 75, 75);
+}
+
+@keyframes loading {
+  $intensity: 4px;
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY($intensity);
+  }
+
+  50% {
+    transform: translateY(0xp);
+  }
+
+  75% {
+    transform: translateY(-$intensity);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes ldsRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .searchContainer {
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  main {
+    width: auto !important;
+  }
+  .paperContainer {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+}

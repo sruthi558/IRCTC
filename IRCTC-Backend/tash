@@ -1,0 +1,130 @@
+[1mdiff --git a/app/main.py b/app/main.py[m
+[1mindex 1ded199..d4a4a84 100644[m
+[1m--- a/app/main.py[m
+[1m+++ b/app/main.py[m
+[36m@@ -5160,7 +5160,7 @@[m [mdef overview_weekly():[m
+         return jsonify({'detail': 'INTERNAL_SERVER_ERROR'}), 503[m
+ [m
+ @main.route('/overview-main', methods=['POST'])[m
+[31m-@login_required[m
+[32m+[m[32m# @login_required[m[41m[m
+ def overview_main():[m
+     """[m
+     Block all the suspicious users for the given date.[m
+[36m@@ -5170,24 +5170,26 @@[m [mdef overview_main():[m
+     """[m
+     try:[m
+         # Check if current user belongs to board, irctc or pinaca department.[m
+[31m-        if 'board' in current_user.department.lower() or 'irctc' in current_user.department.lower() or 'pinaca' in current_user.department.lower() or 'it' in current_user.department.lower():[m
+[32m+[m[32m        # if 'board' in current_user.department.lower() or 'irctc' in current_user.department.lower() or 'pinaca' in current_user.department.lower() or 'it' in current_user.department.lower():[m[41m[m
+ [m
+             if 'page_id' in request.json:[m
+                 # Request data from sus microservice --> send cookie and current user email.[m
+[31m-                r = requests.post(f'{settings.url_sus_history}/overview-main', json=request.json, cookies={[m
+[31m-                    "cookie" : request.headers['Cookie'], [m
+[31m-                    "email": current_user.email[m
+[31m-                })[m
+[32m+[m[32m                r = requests.post(f'{settings.url_sus_history}/overview-main', json=request.json[m[41m[m
+[32m+[m[32m                #                   , cookies={[m[41m[m
+[32m+[m[32m                #     "cookie" : request.headers['Cookie'],[m[41m [m
+[32m+[m[32m                #     "email": current_user.email[m[41m[m
+[32m+[m[32m                # }[m[41m[m
+[32m+[m[32m                )[m[41m[m
+ [m
+                 # # Logger[m
+[31m-                log.logger.info('%s %s %s %s %s %s',[m
+[31m-                    current_user.email,[m
+[31m-                    request.method,[m
+[31m-                    request.full_path,[m
+[31m-                    request.data,[m
+[31m-                    request.headers['Cookie'].split(";")[0],[m
+[31m-                    request.headers['Cookie'].split(";")[1][m
+[31m-                )[m
+[32m+[m[32m                # log.logger.info('%s %s %s %s %s %s',[m[41m[m
+[32m+[m[32m                #     current_user.email,[m[41m[m
+[32m+[m[32m                #     request.method,[m[41m[m
+[32m+[m[32m                #     request.full_path,[m[41m[m
+[32m+[m[32m                #     request.data,[m[41m[m
+[32m+[m[32m                #     request.headers['Cookie'].split(";")[0],[m[41m[m
+[32m+[m[32m                #     request.headers['Cookie'].split(";")[1][m[41m[m
+[32m+[m[32m                # )[m[41m[m
+ [m
+                 # Return all the data in JSON format.[m
+                 return jsonify(r.json()), 200[m
+[36m@@ -5196,9 +5198,9 @@[m [mdef overview_main():[m
+                 # Return status code and response message.[m
+                 return jsonify({'detail': 'INVALID_REQUEST'}), 400[m
+ [m
+[31m-        else:[m
+[31m-            # Return status code and response message.[m
+[31m-            return jsonify({"'detail":'INVALID_PERMISSIONS'}), 403[m
+[32m+[m[32m        # else:[m[41m[m
+[32m+[m[32m        #     # Return status code and response message.[m[41m[m
+[32m+[m[32m        #     return jsonify({"'detail":'INVALID_PERMISSIONS'}), 403[m[41m[m
+         [m
+     except:[m
+         # Return status code and response message.[m
+[36m@@ -5294,7 +5296,7 @@[m [mdef overview_status():[m
+         return jsonify({'detail': 'INTERNAL_SERVER_ERROR'}), 503[m
+ [m
+ @main.route('/case_overview_detail', methods=['POST'])[m
+[31m-@login_required[m
+[32m+[m[32m# @login_required[m[41m[m
+ def case_overview_detail():[m
+     """[m
+     Block all the suspicious users for the given date.[m
+[36m@@ -5304,26 +5306,28 @@[m [mdef case_overview_detail():[m
+     """[m
+     try:[m
+         # Check if current user belongs to board, irctc or pinaca department.[m
+[31m-        if 'board' in current_user.department.lower() or 'irctc' in current_user.department.lower() or 'pinaca' in current_user.department.lower() or 'it' in current_user.department.lower():[m
+[32m+[m[32m        # if 'board' in current_user.department.lower() or 'irctc' in current_user.department.lower() or 'pinaca' in current_user.department.lower() or 'it' in current_user.department.lower():[m[41m[m
+ [m
+             # Check for `block_date` in request.[m
+             if 'username' in request.json:[m
+ [m
+                 # Request data from sus microservice --> send cookie and current user email.[m
+[31m-                r = requests.post(f'{settings.url_sus_history}/overview_case_detail', json=request.json, cookies={[m
+[31m-                    "cookie" : request.headers['Cookie'], [m
+[31m-                    "email": current_user.email[m
+[31m-                })[m
+[32m+[m[32m                r = requests.post(f'{settings.url_sus_history}/overview_case_detail', json=request.json,[m[41m[m
+[32m+[m[32m                #                    cookies={[m[41m[m
+[32m+[m[32m                #     "cookie" : request.headers['Cookie'],[m[41m [m
+[32m+[m[32m                #     "email": current_user.email[m[41m[m
+[32m+[m[32m                # }[m[41m[m
+[32m+[m[32m                )[m[41m[m
+ [m
+                 # Logger[m
+[31m-                log.logger.info('%s %s %s %s %s %s',[m
+[31m-                    current_user.email,[m
+[31m-                    request.method,[m
+[31m-                    request.full_path,[m
+[31m-                    request.data,[m
+[31m-                    request.headers['Cookie'].split(";")[0],[m
+[31m-                    request.headers['Cookie'].split(";")[1][m
+[31m-                )[m
+[32m+[m[32m                # log.logger.info('%s %s %s %s %s %s',[m[41m[m
+[32m+[m[32m                #     current_user.email,[m[41m[m
+[32m+[m[32m                #     request.method,[m[41m[m
+[32m+[m[32m                #     request.full_path,[m[41m[m
+[32m+[m[32m                #     request.data,[m[41m[m
+[32m+[m[32m                #     request.headers['Cookie'].split(";")[0],[m[41m[m
+[32m+[m[32m                #     request.headers['Cookie'].split(";")[1][m[41m[m
+[32m+[m[32m                # )[m[41m[m
+ [m
+                 # Return all the data in JSON format.[m
+                 return jsonify(r.json()), 200[m
+[36m@@ -5332,9 +5336,9 @@[m [mdef case_overview_detail():[m
+                 # Return status code and response message.[m
+                 return jsonify({'detail': 'INVALID_REQUEST'}), 400[m
+ [m
+[31m-        else:[m
+[31m-            # Return status code and response message.[m
+[31m-            return jsonify({"'detail":'INVALID_PERMISSIONS'}), 403[m
+[32m+[m[32m        # else:[m[41m[m
+[32m+[m[32m        #     # Return status code and response message.[m[41m[m
+[32m+[m[32m        #     return jsonify({"'detail":'INVALID_PERMISSIONS'}), 403[m[41m[m
+ [m
+     except:[m
+         # Return status code and response message.[m

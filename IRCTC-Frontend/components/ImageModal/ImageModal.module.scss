@@ -1,0 +1,39 @@
+.ImageModalContainer {
+    z-index: 100;
+    position: fixed;
+  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: hsla(0, 0, 0, 0.2);
+  
+    overflow-x: hidden;
+    overflow-y: scroll;
+  
+    img {
+      position: absolute;
+      top: 20px;
+    }
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .loadingText {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #333;
+  }

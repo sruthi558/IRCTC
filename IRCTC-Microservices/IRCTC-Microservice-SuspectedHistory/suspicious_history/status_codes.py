@@ -1,0 +1,81 @@
+
+overview_case_rfi = {
+    #HIGH TAGS
+    'SUS_EMAIL_IP_MORE_5' : 'UA1',
+    'GIBBERISH_EMAIL' : 'UA1',
+    'DISPOSABLE_EMAIL' : 'UA2',
+    'SUS_USERNAME_IP_MORE_5' : 'UA3',
+    'GIBBERISH_USERNAME' : 'UA3',
+    'SUS_REG_TIME_60' : 'UA4',
+    'SUS_REG_TIME_WITHIN_60_SEC' : 'UA4',
+    "4_USER_REGISTERED_USING_VPS_AND_SAME_IP_POOL" : 'UA5',
+    "SAMEIP_MORE4_VPS" : 'UA6',
+    "4_PNR_BOOKED_USING_VPS_AND_SAME_IP_POOL" : 'UA7',
+
+    #MEDIUM TAGS
+    'SUSPICIOUS_FULLNAME' : 'UB1',
+    'SUSPICIOUS_ADDRESS' : 'UB2',
+    'USER_REG_SAMEIP_SAMEADDR_MORE_4' : 'UB2',
+    'UNVERIFIED_USER' : 'UB3',
+    "SERIES_USERNAME" : 'UB4',
+    "5_PNR_BOOK_SAMEIP_SAMEDAY" : 'UB5',
+    "5_PNR_BOOK_SAMEIP_60SEC" : 'UB6',
+    "TEMPORARY_NUMBER" : 'UB7',
+    'USER_REG_SERIES_COMMON_NAME' : 'UB8',
+
+    #LOW TAGS
+    'SUS_FULLNAME_IP_MORE_5' : 'UC1',
+    'GIBBERISH_FULLNAME' : 'UC1',
+    'GIBBERISH_ADDRESS' : 'UC2',
+    'SUS_ADDRESS_IP_MORE_5' : 'UC2',
+    'USER_BOOK_MULTIPLE_IP' : 'UC3',
+    'USER_REG_SERIES_NONVPS' : 'UC4',
+    'USER_REG_SERIES_VPS' : 'UC5',
+    'USER_BOOK_VPS' : 'UC6',
+    'USER_SERIES_BOOK_VPS' : 'UC7',
+    'USER_SERIES_BOOK_NONVPS' : 'UC8',
+    'USER_REG_VPS' : 'UC9',
+    'USER_SERIES_REG_NONVPS' : 'UC10',
+    'USER_SERIES_REG_VPS' : 'UC11',
+    'BOOKING_IP_VPS' : 'UC12',
+    'REG_MORE_THAN_5' : 'UC13',
+    'TK_MORE_THAN_20_AC' : 'UC14',
+    'TK_MORE_THAN_20_ARP' : 'UC15',
+    'TK_MORE_THAN_20_NON_AC' : 'UC16',
+    'USER_REG_SERIES_EMAIL' : 'UC17',
+    "USER_REG_BOOK_VPS" : "UC18",
+    "USED_BY_SUSPICIOUS_USER" : "UC19", 
+    "INVALID_PINCODE" : "UC20",
+    "USER_BOOK_SUSPICIOUS_MOBILE":"UC21",
+    "SUSPICIOUS_IP":"UC22",
+    "SUSPICIOUS_USER":"UC23",
+    "INVALID_BOOKING_MOBILE":"UC24",
+    "INVALID_REGISTERED_MOBILE":"UC25"
+}
+
+rfi_risk = {
+    6 : 'HIGH',
+    5 : 'HIGH',
+    4 : 'HIGH',
+    3 : 'MEDIUM',
+    2 : 'MEDIUM',
+    1 : 'LOW',
+    0 : 'LOW'
+}
+
+ip_rfi_risk = {
+    6 : 'HIGH',
+    5 : 'HIGH',
+    4 : 'HIGH',
+    3 : 'HIGH',
+    2 : 'MEDIUM',
+    1 : 'LOW',
+    0 : 'LOW'
+}
+
+rfi_risk_pnr = {
+    4 : 'HIGH',
+    3 : 'HIGH',
+    2 : 'MEDIUM',
+    1 : 'LOW'
+}
